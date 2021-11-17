@@ -1,0 +1,35 @@
+{
+    "name": "cyber-duck/laravel-queue-notifier",
+    "autoload": {
+        "psr-4": {
+            "CyberDuck\\LaravelQueueNotifier\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CyberDuck\\LaravelQueueNotifier\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": "^7.4",
+        "laravel/framework": "8.*",
+        "laravel-notification-channels/pagerduty": "^0.4.0",
+        "laravel/horizon": "5.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.23"
+    },
+    "authors": [
+        {
+            "name": "Karl Roberts",
+            "email": "karl@cyber-duck.co.uk"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CyberDuck\\LaravelQueueNotifier\\Providers\\LaravelQueueNotifierProvider"
+            ]
+        }
+    }
+}
