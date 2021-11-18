@@ -1,5 +1,7 @@
 {
     "name": "cyber-duck/laravel-queue-notifier",
+    "description": "A package that allows the platform to notify PagerDuty when queues are non responsive.",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "CyberDuck\\LaravelQueueNotifier\\": "src/"
