@@ -2,11 +2,24 @@
 
 namespace CyberDuck\LaravelQueueNotifier\Tests;
 
+use CyberDuck\LaravelQueueNotifier\Providers\LaravelQueueNotifierProvider;
+
 class TestCase extends \Orchestra\Testbench\TestCase
 {
-    /** @test */
-    public function it_runs_tests(): void
+    protected function getPackageProviders($app): array
     {
-        $this->assertTrue(true);
+        return [
+            LaravelQueueNotifierProvider::class
+        ];
+    }
+
+    protected function defineEnvironment($app)
+    {
+        $app['config']->set('laravel-queue-notifier', [
+            'enabled' => true,
+            'pager-duty' => [
+                'api-key' => 'test-123',
+            ],
+        ]);
     }
 }

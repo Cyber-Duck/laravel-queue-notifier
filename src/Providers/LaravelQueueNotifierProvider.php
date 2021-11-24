@@ -12,11 +12,11 @@ class LaravelQueueNotifierProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../Config/laravel-queue-notifier.php' => config_path('laravel-queue-notifier.php'),
+            __DIR__.'/../../config/laravel-queue-notifier.php' => config_path('laravel-queue-notifier.php'),
         ]);
 
         $this->mergeConfigFrom(
-            __DIR__.'/../Config/laravel-queue-notifier.php', 'laravel-queue-notifier'
+            __DIR__.'/../../config/laravel-queue-notifier.php', 'laravel-queue-notifier'
         );
 
         if (config('laravel-queue-notifier.enabled')) {
